@@ -1,3 +1,41 @@
+Membros-API
+Bem-vindo ao Projeto Membros-API! Este é um projeto que estou desenvolvendo usando algumas tec na parte de backEnd usando: 
+
+ "devDependencies": {
+    "@nestjs/cli": "^10.0.0",
+    "@nestjs/schematics": "^10.0.0",
+    "@nestjs/testing": "^10.0.0",
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.2",
+    "@types/node": "^20.3.1",
+    "@types/passport-jwt": "^3.0.9",
+    "@types/passport-local": "^1.0.35",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "jest": "^29.5.0",
+    "prettier": "^3.0.0",
+    "prisma": "^5.1.1",
+    "source-map-support": "^0.5.21",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.1.0",
+    "ts-loader": "^9.4.3",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.1.3"
+  },
+
+VISÃO GERAL:
+
+A algum tempo de estudos e tentativas na área, me deparei com o seguinte pensamento: "O que posso fazer com esse conhecimento para ajudar as pessoas em meu redor??", com isso, já que estou em um ambiente critão onde muitas vezes na igreja não conseguimos ter na palma da mão a administração de todos os meMbros de uma igreja, dando assim um melhor aproximamento dos "MEMBROS", iniciei a construção desse app, onde irei facilitar a gestão de membros na igreja!
+
+Se você tiver alguma pergunta ou quiser discutir colaborações, você pode entrar em contato comigo por isaqueferreiradesousa@gmail.com.
+
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
