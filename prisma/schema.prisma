@@ -1,0 +1,80 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String @id @default(uuid())
+  email    String @unique
+  password String
+  name     String
+
+  cargo   cargo @relation(fields: [cargoId], references: [id])
+  cargoId Int
+
+  igreja   igreja @relation(fields: [igrejaId], references: [id])
+  igrejaId String
+}
+
+model pessoas {
+  id           String  @id @default(uuid())
+  nome         String
+  photoUrl     String?
+  endereco     String
+  bairro       String
+  cep          String
+  cidade       String
+  uf           String
+  tel          String
+  nascimento   String
+  escolaridade String?
+  pai          String?
+  mae          String
+  cpf          String
+  email        String
+  profissao    String?
+  familyId     String?
+
+  nasceuLarCritao  Boolean?
+  batizadoEspirito Boolean?
+  batizadoNaAgua   Boolean?
+
+  observacao String?
+
+  igreja   igreja @relation(fields: [igrejaId], references: [id])
+  igrejaId String
+
+  cargo   cargo @relation(fields: [cargoId], references: [id])
+  cargoId Int
+}
+
+model igreja {
+  id   String @id @default(uuid())
+  name String @default("Assembleia de Deus Rios de Águas Vivas")
+
+  members pessoas[]
+  user    User[]
+}
+
+model cargo {
+  id      Int       @id @default(autoincrement())
+  name    String
+  pessoas pessoas[]
+
+  user User[]
+}
+
+model visitantes {
+  id             Int     @id @default(autoincrement())
+  name           String
+  contato        String
+  Data           String
+  SetronouMembro String?
+}
